@@ -6,6 +6,19 @@ const Counter = () => {
     const initalValue = 0;
     const [counter, setCounter] = useState(initalValue)
 
+    const Increment = () => {
+        setCounter(prevCount => prevCount + 1)
+    }
+    const Decrement = () => {
+        setCounter(prevCount => prevCount - 1)
+    }
+    const Reset = () => {
+        setCounter(initalValue)
+    }
+    const Jump = () => {
+        setCounter(userInput = parseInt(prompt("plese enter the number")))
+        console.log(userInput)
+    }
 
     return (
         <div className="ui cards">
@@ -19,21 +32,21 @@ const Counter = () => {
 
                 <div className="extra content">
                     <div className="ui two buttons">
-                        <div className="ui basic green button" onClick={() => setCounter(prevCount => prevCount + 1)} >Increment</div>
-                        <div className="ui basic red button" onClick={() => setCounter(prevCount => prevCount - 1)}>Decrement</div>
+                        <div className="ui basic green button" onClick={Increment} >Increment</div>
+                        <div className="ui basic red button" onClick={Decrement}>Decrement</div>
 
 
                     </div>
 
                     <div className="extra content">
                         <div className="ui two buttons">
-                            <div className="ui basic brown button" >Jump to </div>
+                            <div className="ui basic brown button" onClick={Jump}>Jump to </div>
 
                         </div>
                     </div>
                     <div className="extra content">
                         <div className="ui two buttons">
-                            <div className="ui basic black button" onClick={() => setCounter(initalValue)} >Reset</div>
+                            <div className="ui basic black button" onClick={Reset} >Reset</div>
 
                         </div>
 
