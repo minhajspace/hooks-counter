@@ -19,8 +19,8 @@ const Counter = () => {
 
                 <div className="extra content">
                     <div className="ui two buttons">
-                        <div className="ui basic green button" onClick={() => setCounter(counter + 1)} >Increment</div>
-                        <div className="ui basic red button" onClick={() => setCounter(counter - 1)}>Decrement</div>
+                        <div className="ui basic green button" onClick={() => setCounter(prevCount => prevCount + 1)} >Increment</div>
+                        <div className="ui basic red button" onClick={() => setCounter(prevCount => prevCount - 1)}>Decrement</div>
 
 
                     </div>
