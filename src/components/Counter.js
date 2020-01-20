@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 
+let userInput;
+
 const Counter = () => {
-    const [counter, setCounter] = useState(0)
+    const initalValue = 0;
+    const [counter, setCounter] = useState(initalValue)
+
+
     return (
         <div className="ui cards">
             <div className="card">
@@ -28,7 +33,7 @@ const Counter = () => {
                     </div>
                     <div className="extra content">
                         <div className="ui two buttons">
-                            <div className="ui basic black button" >Reset</div>
+                            <div className="ui basic black button" onClick={() => setCounter(initalValue)} >Reset</div>
 
                         </div>
 
